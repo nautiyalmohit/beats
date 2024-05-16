@@ -36,7 +36,7 @@ router.post('/post', async (req, res) => {
         });
 
         const driveResponse = await driveUploader(req.body.name);
-        console.log(driveResponse);
+        // console.log(driveResponse);
         if (driveResponse === false) {
             console.log('driveResponse: ', driveResponse);
             return res.status(500).send('Internal Server Error while uploading to drive');
